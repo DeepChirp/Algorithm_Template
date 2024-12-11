@@ -29,20 +29,13 @@ jobs:
 
       - name: 发布到output分支
         run: |
-          # 创建新的output分支或切换到已存在的output分支
           git checkout output 2>/dev/null || git checkout -b output
-
-          # 清空分支内容（保留.git目录）
           git rm -rf .
           git clean -fxd
-
-          # 从生成的markdown恢复文件
           git checkout main -- merge_code.py
           python merge_code.py
-
-          # 提交更改
           git add output.md
           git commit -m "feat: 更新算法模板文档 from ${{ github.sha }}" || echo "No changes to commit"
-
-          # 推送到output分支
-          git push origin output -f
+          git push -u origin output -f
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
