@@ -6,6 +6,8 @@
  * 若大小为$size$，可用节点编号为$0$到$size - 1$（零下标）
  *
  * 每个操作的平均时间几乎为$O(1)$
+ *
+ * Verdict: P3367: https://www.luogu.com.cn/record/189760008
  */
 
 #include <cstddef>
