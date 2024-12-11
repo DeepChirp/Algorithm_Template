@@ -1,0 +1,48 @@
+name: Publish Markdown
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # 获取完整历史以便创建新分支
+
+      - name: 设置Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.x'
+
+      - name: 运行合并脚本
+        run: python merge_code.py
+
+      - name: 配置Git
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+
+      - name: 发布到output分支
+        run: |
+          # 创建新的output分支或切换到已存在的output分支
+          git checkout output 2>/dev/null || git checkout -b output
+
+          # 清空分支内容（保留.git目录）
+          git rm -rf .
+          git clean -fxd
+
+          # 从生成的markdown恢复文件
+          git checkout main -- merge_code.py
+          python merge_code.py
+
+          # 提交更改
+          git add output.md
+          git commit -m "feat: 更新算法模板文档 from ${{ github.sha }}" || echo "No changes to commit"
+
+          # 推送到output分支
+          git push origin output -f
