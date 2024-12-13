@@ -160,21 +160,17 @@ bool operator<(Point const &left, Point const &right) {
     number cross_product = Vector{left} ^ Vector { right };
     if (cross_product > 0) {
         return true;
-    } else if (cross_product == 0) {
+    }
+    if (cross_product == 0) {
         if (left.x > right.x) {
             return false;
-        } else if (left.x < right.x) {
-            return true;
-        } else {
-            if (left.y > right.y) {
-                return false;
-            } else {
-                return true;
-            }
         }
-    } else {
-        return false;
+        if (left.x < right.x) {
+            return true;
+        }
+        return left.y <= right.y;
     }
+    return false;
 }
 
 // 无需对point_list进行预处理
@@ -264,15 +260,15 @@ double length(std::vector<Point> const &convex_hull_list) {
 // 注意转换为double除以2可能有精度问题！
 // Verdict：C5 F
 number doubled_polygon_area(std::vector<Point> const &sorted_convex_list) {
-    Point const &aux_ponint = *std::begin(sorted_convex_list);
+    Point const &aux_point = *std::begin(sorted_convex_list);
 
     number doubled_area = 0;
 
     size_t len = sorted_convex_list.size();
 
     for (size_t i = 0; i < len; i++) {
-        Vector v1{aux_ponint, sorted_convex_list[i]};
-        Vector v2{aux_ponint, sorted_convex_list[(i + 1) % len]};
+        Vector v1{aux_point, sorted_convex_list[i]};
+        Vector v2{aux_point, sorted_convex_list[(i + 1) % len]};
 
         doubled_area += (v1 ^ v2);
     }
