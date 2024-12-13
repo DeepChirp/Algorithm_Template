@@ -16,8 +16,7 @@ Checks: >
   -readability-function-cognitive-complexity,
   -readability-isolate-declaration,
   -readability-magic-numbers,
-  -readability-identifier-length,
-  -readability-identifier-naming
+  -readability-identifier-length
 CheckOptions:
   # 设置变量名为 lower_case 格式
   - key: readability-identifier-naming.VariableCase
