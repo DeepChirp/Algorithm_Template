@@ -1,0 +1,9 @@
+# https://clangd.llvm.org/config
+InlayHints:
+  Enabled: Yes
+  BlockEnd: Yes
+  DeducedTypes: Yes
+  Designators: Yes
+  ParameterNames: Yes
+Hover:
+  ShowAKA: Yes
