@@ -74,9 +74,8 @@ MLEResult modular_linear_equation_solver(number a, number b, number n) {
 
     if (b % d == 0) {
         return MLEResult{true, ((r.x * b / d) + n) % n};
-    } else {
-        return MLEResult{false, 0};
     }
+    return MLEResult{false, 0};
 }
 
 // n = n_1n_2...n_k

@@ -45,7 +45,7 @@ class Multiplier {
     explicit Multiplier(std::vector<number> const &a_list,
                         std::vector<number> const &b_list) {
         input_len = std::max(a_list.size(), b_list.size());
-        size_t len = nextPowerOfTwo(2 * input_len);
+        size_t len = next_power_of_two(2 * input_len);
 
         a_len = a_list.size();
         b_len = b_list.size();
@@ -87,7 +87,7 @@ class Multiplier {
     }
 
   private:
-    size_t nextPowerOfTwo(size_t input) {
+    static size_t next_power_of_two(size_t input) {
         if (input == 0) {
             return 1;
         }
@@ -106,14 +106,14 @@ class Multiplier {
 
     // 同样需要保证 len 是 2 的幂
     // 记 rev[i] 为 i 翻转后的值
-    void change(std::vector<Complex> &y) {
+    static void change(std::vector<Complex> &y) {
         std::vector<size_t> rev;
         size_t len = y.size();
         rev.resize(len, 0);
 
         for (size_t i = 0; i < len; ++i) {
             rev[i] = rev[i >> 1] >> 1;
-            if (i & 1) { // 如果最后一位是 1，则翻转成 len/2
+            if (i % 2 != 0) { // 如果最后一位是 1，则翻转成 len/2
                 rev[i] |= len >> 1;
             }
         }
@@ -122,7 +122,6 @@ class Multiplier {
                 std::swap(y[i], y[rev[i]]);
             }
         }
-        return;
     }
 
     /*
@@ -130,7 +129,7 @@ class Multiplier {
      * len 必须是 2^k 形式
      * reverse == false 时是 DFT，reverse == true 时是 IDFT
      */
-    void fft(std::vector<Complex> &y, bool reverse) {
+    static void fft(std::vector<Complex> &y, bool reverse) {
         size_t len = y.size();
 
         // 位逆序置换
@@ -192,7 +191,7 @@ int main(void) {
 
     // 进位
     for (size_t i = 0; i < temp.size(); i++) {
-        int current_digit = (int)(temp[i] + 0.5);
+        int current_digit = (int)std::lround(temp[i]);
 
         current_digit += carry;
 

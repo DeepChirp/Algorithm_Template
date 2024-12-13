@@ -36,7 +36,6 @@ char *s_gets(char *dst, int n) {
         } else {
             int ch;
             while ((ch = getchar()) != '\n' && ch != EOF) {
-                continue;
             }
         }
     }

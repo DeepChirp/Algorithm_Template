@@ -8,7 +8,7 @@
 typedef long long number;
 
 // a ^ b mod n
-number modular_exponentitaion(number a, number b, number n) {
+number modular_exponentiation(number a, number b, number n) {
     number result = 1;
     number temp = a % n;
 

@@ -34,7 +34,7 @@ void change(std::vector<Complex> &y) {
 
     for (size_t i = 0; i < len; ++i) {
         rev[i] = rev[i >> 1] >> 1;
-        if (i & 1) { // 如果最后一位是 1，则翻转成 len/2
+        if (i % 2 != 0) { // 如果最后一位是 1，则翻转成 len/2
             rev[i] |= len >> 1;
         }
     }
@@ -43,7 +43,6 @@ void change(std::vector<Complex> &y) {
             std::swap(y[i], y[rev[i]]);
         }
     }
-    return;
 }
 
 /*

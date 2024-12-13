@@ -66,7 +66,7 @@ struct Edge {
         : from{from_}, to{to_}, weight{weight_} {};
 };
 
-std::vector<Edge> Kruskal(std::vector<Edge> &edge_list, size_t node_count);
+std::vector<Edge> kruskal(std::vector<Edge> &edge_list, size_t node_count);
 
 int main(void) {
     size_t node_count, edge_count;
@@ -88,7 +88,7 @@ int main(void) {
         edge_list.emplace_back(from, to, weight);
     }
 
-    std::vector<Edge> mst_edge_list = Kruskal(edge_list, node_count);
+    std::vector<Edge> mst_edge_list = kruskal(edge_list, node_count);
 
     if (mst_edge_list.size() < (node_count - 1)) {
         std::printf("orz\n");
@@ -102,7 +102,7 @@ int main(void) {
     return 0;
 }
 
-std::vector<Edge> Kruskal(std::vector<Edge> &edge_list, size_t node_count) {
+std::vector<Edge> kruskal(std::vector<Edge> &edge_list, size_t node_count) {
     std::sort(std::begin(edge_list), std::end(edge_list),
               [](Edge const &a, Edge const &b) { return a.weight < b.weight; });
 
