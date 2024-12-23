@@ -1,4 +1,10 @@
-// Verdict: P1347: https://www.luogu.com.cn/record/192509279
+/*
+ * name: 拓扑排序
+ *
+ * description:
+ *
+ * Verdict: P1347: https://www.luogu.com.cn/record/192509279
+ */
 #include <queue>
 #include <vector>
 

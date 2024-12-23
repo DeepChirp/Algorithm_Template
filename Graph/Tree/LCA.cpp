@@ -1,6 +1,14 @@
-// 求树上两节点的最近公共祖先，单次询问复杂度$O(\log{N})$，初始化$O(N\log{N})$
-// 传入的应当是邻接表表示的无向图
-// Verdict: P3379: https://www.luogu.com.cn/record/195462195
+/*
+ * name: 最近公共祖先
+ *
+ * description:
+ *
+ * 求树上两节点的最近公共祖先，单次询问复杂度$O(\log{N})$，初始化$O(N\log{N})$
+ *
+ * 传入的应当是邻接表表示的无向图
+ *
+ * Verdict: P3379: https://www.luogu.com.cn/record/195462195
+ */
 
 #include <array>
 #include <cstdio>

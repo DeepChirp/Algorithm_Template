@@ -1,3 +1,14 @@
+/*
+ * name: 归并排序
+ *
+ * description:
+ *
+ * 时间复杂度：
+ * 最坏情况：$O(n \log n)$ / 平均情况：$O(n \log n)$ / 最好情况：$O(n \log n)$
+ *
+ * 空间复杂度：$O(n)$
+ */
+
 #include <algorithm>
 #include <cstdio>
 #include <vector>

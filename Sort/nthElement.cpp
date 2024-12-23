@@ -1,3 +1,10 @@
+/*
+ * name: 寻找第n大元素
+ *
+ * description:
+ * 通过快速排序的 partition 操作，可以在O(n)的时间复杂度内找到第n大的元素。
+ */
+
 #include <vector>
 
 typedef long long i64;

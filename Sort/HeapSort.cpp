@@ -1,10 +1,21 @@
+/*
+ * name: 堆排序
+ *
+ * description:
+ *
+ * 时间复杂度：
+ * 最坏情况：$O(n \log n)$ / 平均情况：$O(n \log n)$ / 最好情况：$O(n \log n)$
+ *
+ * 空间复杂度：$O(n)$ + $O(1)$（辅助空间）
+ *
+ * Verdict: https://www.luogu.com.cn/record/195212889
+ */
+
 #include <cstdio>
 #include <utility>
 #include <vector>
 
 typedef long long i64;
-
-// Verdict: https://www.luogu.com.cn/record/195212889
 
 class Heap {
   public:
@@ -58,7 +69,7 @@ class Heap {
     }
 
     void max_heapify(size_t i) {
-        while (1) {
+        while (true) {
             size_t left_idx = left(i);
             size_t right_idx = right(i);
 

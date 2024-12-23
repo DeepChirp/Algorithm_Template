@@ -1,5 +1,10 @@
-// 求强连通分量
-// Verdict: https://www.luogu.com.cn/record/194487781
+/*
+ * name: DFS 强连通分量
+ *
+ * description:
+ *
+ * Verdict: https://www.luogu.com.cn/record/194487781
+ */
 
 #include <algorithm>
 #include <cstdio>

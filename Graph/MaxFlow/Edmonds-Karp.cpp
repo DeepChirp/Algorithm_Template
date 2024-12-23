@@ -1,10 +1,16 @@
-// Verdict: E4 A
-// Verdict: P3376: https://www.luogu.com.cn/record/194584006
-// O(V(E^2))
-// 处理了反平行边、重边、自环
-// 反平行边：新建节点
-// 重边：容量相加
-// 自环：直接移除
+/*
+ * name: Edmonds-Karp 算法
+ *
+ * description:
+ *
+ * 处理了反平行边、重边、自环。其中：反平行边新建节点，重边容量相加，自环直接移除。
+ *
+ * 时间复杂度：$O(V(E^2))$
+ *
+ * Verdict:
+ * - E4 A
+ * - P3376: https://www.luogu.com.cn/record/194584006
+ */
 
 #include <cstdio>
 #include <cstring>
