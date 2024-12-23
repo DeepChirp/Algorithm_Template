@@ -2,8 +2,7 @@
  * name: 快速傅里叶变换
  * description:
  *
- * 设$f(x) = a_0x^0 + a_1x^1 + \ldots + a_{n - 1}x^{n -
- * 1}$，则FFT可求出$[f(\omega_n^0), f(\omega_n^1), \ldots, f(\omega_n^{n - 1})]$
+ * 设$f(x) = a_0x^0 + a_1x^1 + \ldots + a_{n - 1}x^{n - 1}$，则FFT可求出$[f(\omega_n^0), f(\omega_n^1), \ldots, f(\omega_n^{n - 1})]$
  *
  * 时间复杂度：$O(N\log{N})$
  *

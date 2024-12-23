@@ -4,18 +4,13 @@
  *
  * Dijkstra 算法用于计算图中的单源最短路径。其只能处理权值非负的图，且无法检测负环。
  *
- * Dijkstra 算法的基本思想是贪心算法。它维护一个数组 distance，其中 distance[u]
- * 表示从起点到顶点 u 的最短路径的长度。在每一步中，Dijkstra
- * 算法选择一个未标记的顶点 u，使得 distance[u] 最小，并标记顶点
- * u。然后，对于所有与顶点 u 相邻的顶点 v，更新 distance[v] = min(distance[v],
- * distance[u] + weight(u, v))。
+ * Dijkstra 算法的基本思想是贪心算法。它维护一个数组 distance，其中 distance[u]表示从起点到顶点 u 的最短路径的长度。在每一步中，Dijkstra算法选择一个未标记的顶点 u，使得 distance[u] 最小，并标记顶点u。然后，对于所有与顶点 u 相邻的顶点 v，更新 distance[v] = min(distance[v],distance[u] + weight(u, v))。
  *
  * 时间复杂度：$O(M \log{M})$
  *
  * Verdict：
  * - P3371: https://www.luogu.com.cn/record/194010420
  * - P4779: https://www.luogu.com.cn/record/194008908
- *
  */
 
 #include <cstddef>
