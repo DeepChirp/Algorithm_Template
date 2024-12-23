@@ -1,0 +1,6 @@
+*.aux
+*.log
+*.toc
+output.md
+output.pdf
+output.tex
