@@ -7,8 +7,9 @@
  *
  * 注意：保证所有操作后（+，-，*），得到的len反映了实际的数位长度（即，考虑了进位，并删去了前导零）
  *
- * Verdict：P1601：https://www.luogu.com.cn/record/190643889
- * Verdict：P1303：https://www.luogu.com.cn/record/190648675
+ * Verdict：
+ * - P1601：https://www.luogu.com.cn/record/190643889
+ * - P1303：https://www.luogu.com.cn/record/190648675
  */
 
 #include <algorithm>

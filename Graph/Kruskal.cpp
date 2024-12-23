@@ -4,6 +4,8 @@
  *
  * Kruskal 算法，用于计算最小生成树。
  *
+ * 时间复杂度：$O(E \log E + E \alpha(V))$。
+ *
  * Verdict: P3366: https://www.luogu.com.cn/record/189763566
  */
 

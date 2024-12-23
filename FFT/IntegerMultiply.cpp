@@ -7,8 +7,9 @@
  *
  * 时间复杂度：$O(N\log{N})$
  *
- * Verdict：C6 D
- * Verdict：P1919： https://www.luogu.com.cn/record/191419431
+ * Verdict：
+ * - C6 D
+ * - P1919: https://www.luogu.com.cn/record/191419431
  */
 
 #include <algorithm>

@@ -2,8 +2,7 @@
  * name: Dijkstra 算法
  * description:
  *
- * Dijkstra 算法是一种用于计算图中的单源最短路径的算法。Dijkstra
- * 算法的主要思想是从起点开始，逐步扩展到距离起点更远的顶点，直到到达终点。
+ * Dijkstra 算法用于计算图中的单源最短路径。其只能处理权值非负的图，且无法检测负环。
  *
  * Dijkstra 算法的基本思想是贪心算法。它维护一个数组 distance，其中 distance[u]
  * 表示从起点到顶点 u 的最短路径的长度。在每一步中，Dijkstra
@@ -11,15 +10,15 @@
  * u。然后，对于所有与顶点 u 相邻的顶点 v，更新 distance[v] = min(distance[v],
  * distance[u] + weight(u, v))。
  *
- * Verdict: P3371: https://www.luogu.com.cn/record/194010420
+ * 时间复杂度：$O(M \log{M})$
  *
- * Verdict: P4779: https://www.luogu.com.cn/record/194008908
+ * Verdict：
+ * - P3371: https://www.luogu.com.cn/record/194010420
+ * - P4779: https://www.luogu.com.cn/record/194008908
  *
  */
 
 #include <cstddef>
-#include <cstdint>
-#include <iostream>
 #include <queue>
 #include <vector>
 

@@ -2,11 +2,10 @@
  * name: 最大公约数（拓展欧几里得算法）、线性同余方程、中国剩余定理
  * description:
  *
- * Verdict：B4025：https://www.luogu.com.cn/record/190564296
- *
- * Verdict：P1082：https://www.luogu.com.cn/record/190565417
- *
- * Verdict：P1495：https://www.luogu.com.cn/record/190793944
+ * Verdict：
+ * - B4025：https://www.luogu.com.cn/record/190564296
+ * - P1082：https://www.luogu.com.cn/record/190565417
+ * - P1495：https://www.luogu.com.cn/record/190793944
  *
  * 注：P1495的一个WA由i64溢出导致，相信出题不会这么阴间
  */

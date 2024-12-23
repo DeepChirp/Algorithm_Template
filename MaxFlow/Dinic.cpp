@@ -2,8 +2,9 @@
  * name: Dinic 算法
  * description:
  *
- * Dinic 算法是求解网络流问题的一种算法，是 Edmonds-Karp 算法的优化版本。Dinic
- * 算法的时间复杂度为 O(V^2 * E)。
+ * Dinic 算法是求解网络流问题的一种算法，是 Edmonds-Karp 算法的优化版本。
+ *
+ * 时间复杂度：$O(V^2 * E)$。
  *
  * Dinic
  * 算法的基本思想是通过多次广度优先搜索（BFS）找到层次图，然后通过多次深度优先搜索（DFS）找到增广路径，最终求解出最大流。
