@@ -60,11 +60,7 @@ for root, dirs, files in os.walk("."):
                 while description_lines and not description_lines[-1]:
                     description_lines.pop()
                 if description_lines:
-                    description = "\n\n".join(
-                        " ".join(para.split())  # 规范化段落内的空格
-                        for para in " ".join(description_lines).split("  ")
-                        if para.strip()
-                    )  # 用两个空格分割段落
+                    description = "\n".join(description_lines)
                 # 移除头部注释
                 code = code.replace(header_match.group(0), "").lstrip()
 
