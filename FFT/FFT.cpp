@@ -7,6 +7,7 @@
  * 时间复杂度：$O(N\log{N})$
  *
  * Verdict：C6 C
+ * Verdict：P3803： https://www.luogu.com.cn/record/189563795
  */
 
 #include <algorithm>
