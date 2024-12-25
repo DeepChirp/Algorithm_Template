@@ -3,12 +3,9 @@
  * description:
  *
  * KMP：
- * - `KMPMatcher(std::string const
- &pattern)`：创建以pattern为模式的字符串匹配“状态机”
-   - `match(std::string const
- &to_match)`：返回`to_match`中所有匹配位置的起始下标（0下标）
- * - `void generate_FA_transition_table(size_t
- delta[MAX_STR_LEN][ALPHABET_LEN])`：利用$\pi$数组生成字符串有限状态机的状态转移表
+ * - `KMPMatcher(std::string const &pattern)`：创建以pattern为模式的字符串匹配“状态机”
+ * - `match(std::string const &to_match)`：返回`to_match`中所有匹配位置的起始下标（0下标）
+ * - `void generate_FA_transition_table(size_t delta[MAX_STR_LEN][ALPHABET_LEN])`：利用$\pi$数组生成字符串有限状态机的状态转移表
  *
  *
  * Verdict: P3375: https://www.luogu.com.cn/record/192756655
