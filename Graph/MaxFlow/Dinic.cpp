@@ -7,6 +7,10 @@
  * 时间复杂度：$O(V^2 * E)$。
  *
  * Dinic 算法的基本思想是通过多次广度优先搜索（BFS）找到层次图，然后通过多次深度优先搜索（DFS）找到增广路径，最终求解出最大流。
+ *
+ * Verdict:
+ * - E4 A
+ * - P3376: https://www.luogu.com.cn/record/196009163
  */
 
 #include <cstdint>
